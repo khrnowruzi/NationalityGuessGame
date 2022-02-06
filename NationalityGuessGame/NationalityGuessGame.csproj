@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Chinese\Chinese_1.jpg" />
+    <None Remove="Images\Chinese\Chinese_2.jpg" />
+    <None Remove="Images\Japanese\Japanese_1.jpg" />
+    <None Remove="Images\Japanese\Japanese_2.jpg" />
+    <None Remove="Images\Korean\Korean_1.jpg" />
+    <None Remove="Images\Korean\Korean_2.jpg" />
+    <None Remove="Images\Thai\Thai_1.jpg" />
+    <None Remove="Images\Thai\Thai_2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Chinese\Chinese_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Chinese\Chinese_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Japanese\Japanese_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Japanese\Japanese_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Korean\Korean_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Korean\Korean_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Thai\Thai_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Thai\Thai_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

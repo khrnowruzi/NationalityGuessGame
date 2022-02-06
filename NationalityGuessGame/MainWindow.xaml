@@ -1,0 +1,89 @@
+﻿<Window x:Class="NationalityGuessGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        x:Name="mainWindow" WindowState="Maximized" WindowStyle="None">
+    <Border BorderBrush="#004064"
+            BorderThickness="2"
+            Background="#ffc080">
+        <Canvas x:Name="canvas">
+            <Label Content="Japanese"
+                   Canvas.Left="0"
+                   Canvas.Top="0"
+                   Style="{StaticResource nationalityLable}"/>
+            <Label Content="Chinese"
+                   Canvas.Right="0"
+                   Canvas.Top="0"
+                   Style="{StaticResource nationalityLable}"/>
+            <Label Content="Korean"
+                   Canvas.Left="0"
+                   Canvas.Bottom="0"
+                   Style="{StaticResource nationalityLable}"/>
+            <Label Content="Thai"
+                   Canvas.Right="0"
+                   Canvas.Bottom="0"
+                   Style="{StaticResource nationalityLable}"/>
+            <Button x:Name="nationalityButton"
+                    Canvas.Top="20"
+                    Visibility="Collapsed"
+                    PreviewMouseUp="NationalityButton_MouseLeftButtonUp"
+                    PreviewMouseDown="NationalityButton_MouseLeftButtonDown"
+                    PreviewMouseMove="NationalityButton_MouseMove">
+                <Button.Content>
+                    <Image x:Name="nationalityImage" HorizontalAlignment="Center" />
+                </Button.Content>
+            </Button>
+            <Border x:Name="scoreBorder"
+                    BorderBrush="#592b2b"
+                    BorderThickness="1"
+                    Width="250"
+                    Height="150"
+                    Visibility="Collapsed">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label x:Name="scoreLable"
+                           Grid.Row="0"
+                           HorizontalContentAlignment="Center"
+                           VerticalContentAlignment="Center"
+                           Background="Green"
+                           Foreground="#fff"
+                           FontSize="25"/>
+                    <Border Grid.Row="1"
+                            BorderBrush="#592b2b"
+                            BorderThickness="0 1 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0"
+                                    Content="Start Again!"
+                                    Margin="2"
+                                    Background="#ffff80"
+                                    Click="StartAgain"/>
+                            <Button Grid.Column="1"
+                                    Margin="2"
+                                    Content="End Game"
+                                    Background="#ffff80"
+                                    Click="Exit"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Button x:Name="startButton"
+                    Content="Start Game"
+                    Width="200"
+                    Height="100"
+                    FontSize="25"
+                    Background="Green"
+                    Foreground="#fff"
+                    Click="StartGame"/>
+        </Canvas>
+    </Border>
+</Window>
